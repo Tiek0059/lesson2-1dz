@@ -13,7 +13,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-
 import static android.widget.Toast.makeText;
 
 public class MainActivity extends AppCompatActivity {
@@ -56,8 +55,9 @@ public class MainActivity extends AppCompatActivity {
         thirdNumber = edt3.getText().toString();
         try {
             result = Integer.parseInt(firstNumber) + Integer.parseInt(secondNumber) / Integer.parseInt(thirdNumber);
-        }catch (Exception e){
-            Toast toast = makeText(MainActivity.this,"Не получилось!",Toast.LENGTH_LONG);
+        }
+        catch (Exception e){
+            Toast toast = makeText(MainActivity.this,"К сожалению ничего не получилось",Toast.LENGTH_LONG);
             toast.setGravity(Gravity.TOP,160,0);
             toast.show();
         }
